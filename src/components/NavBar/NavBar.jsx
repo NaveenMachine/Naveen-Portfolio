@@ -1,99 +1,112 @@
-//import * as React from 'react';
-//import { styled } from '@mui/material/styles';
-//import Box from '@mui/material/Box';
-import { AppBar, Toolbar, Typography } from '@mui/material';
-//import Grid2 from '@mui/material/Grid2';
+import { AppBar, Toolbar, Typography, useTheme, useMediaQuery } from '@mui/material';
+import { Tabs, Tab, Box, Button, IconButton } from '@mui/material';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
 import { useState } from 'react';
+import DrawerComp from '../Drawer/Drawer';
 import PropTypes from 'prop-types';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 
 export default function NavBar({ links }) {
-    const [value, setValue] = useState();
+  const theme = useTheme();
+  const isMatch = useMediaQuery(theme.breakpoints.down('md'));
+  const [value, setValue] = useState();
+
   return (
-    
-    <AppBar
-    sx={{
-        backgroundImage: 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%)',
-    }}
->
-    <Toolbar>
-        {/* Main flex container */}
-        <Box
-            sx={{
+    <>
+      
+
+      {/* AppBar */}
+      <AppBar
+        sx={{
+          backgroundImage:
+            'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%)',
+        }}
+      >
+        <Toolbar>
+          {/* Conditional Rendering */}
+          {isMatch ? (
+            <>
+              {/* Fixed Logo */}
+      <Button
+        sx={{
+          background: 'rgba(2,0,36,1)', // Optional background
+          '&:hover': {
+            background: 'rgba(2,0,36,0.8)', // Hover effect
+          },
+          color: 'white', // Text color
+        }}
+      >
+        <Typography>NK</Typography>
+      </Button>
+            
+            <DrawerComp links={links} />
+            </>
+          ) : (
+            <>
+            {/* Fixed Logo */}
+      <Button
+        sx={{
+          background: 'rgba(2,0,36,1)', // Optional background
+          '&:hover': {
+            background: 'rgba(2,0,36,0.8)', // Hover effect
+          },
+          color: 'white', // Text color
+        }}
+      >
+        <Typography>NK</Typography>
+      </Button>
+            <Box
+              sx={{
                 width: '100%',
                 display: 'flex',
                 justifyContent: 'space-between', // Spread items across the navbar
                 alignItems: 'center',
-            }}
-        >
-            {/* Left side (Logo or Name) */}
-            <Button sx={{border:'none'}}><Typography sx={{color:'white'}}>NK</Typography></Button>
-
-            {/* Center (Tabs) */}
-            <Tabs
+              }}
+            >
+              {/* Center (Tabs) */}
+              <Tabs
                 sx={{ marginLeft: 5 }}
                 indicatorColor="secondary"
                 textColor="inherit"
                 value={value}
                 onChange={(e, val) => setValue(val)}
-            >
+              >
                 {links.map((link, index) => (
-                    <Tab key={index} label={link} />
+                  <Tab key={index} label={link} />
                 ))}
-            </Tabs>
+              </Tabs>
 
-            {/* Right side (Buttons) */}
-            <Box
+              {/* Right side (Icons & Contact Button) */}
+              <Box
                 sx={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: 2, // Spacing between buttons
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 2, // Spacing between buttons
                 }}
-            >
-                <Button sx={{ width: 40, // Set width
-            height: 40, // Set height
-            borderRadius: '50%', // Makes the button circular
-            background: 'rgba(2,0,36,1)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center', // Center-align the icon
-            minWidth: 0,  }} variant="contained">
-                    <LinkedInIcon />
+              >
+                <IconButton sx={{ background: 'rgba(2,0,36,1)' }}>
+                  <LinkedInIcon sx={{ color: 'white', '&:hover':{color:'black'}  }} />
+                </IconButton>
+                <IconButton sx={{ background: 'rgba(2,0,36,1)' }}>
+                  <GitHubIcon sx={{ color: 'white', '&:hover':{color:'black'} }} />
+                </IconButton>
+                <IconButton sx={{ background: 'rgba(2,0,36,1)' }}>
+                  <InstagramIcon sx={{ color: 'white', '&:hover':{color:'black'} }} />
+                </IconButton>
+                <Button
+                  sx={{ marginLeft: 5, background: 'rgba(2,0,36,1)' }}
+                  variant="contained"
+                >
+                  Contact
                 </Button>
-                <Button sx={{ width: 40, // Set width
-            height: 40, // Set height
-            borderRadius: '50%', // Makes the button circular
-            background: 'rgba(2,0,36,1)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center', // Center-align the icon
-            minWidth: 0,  }} variant="contained">
-                    <GitHubIcon />
-                </Button>
-                <Button sx={{ width: 40, // Set width
-            height: 40, // Set height
-            borderRadius: '50%', // Makes the button circular
-            background: 'rgba(2,0,36,1)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center', // Center-align the icon
-            minWidth: 0,   }} variant="contained">
-                    <InstagramIcon />
-                </Button>
-                <Button sx={{marginLeft: 5, background: 'rgba(2,0,36,1)' }} variant="contained">
-                    Contact
-                </Button>
+              </Box>
             </Box>
-        </Box>
-    </Toolbar>
-</AppBar>
-    
+            </>
+          )}
+        </Toolbar>
+      </AppBar>
+    </>
   );
 }
 
