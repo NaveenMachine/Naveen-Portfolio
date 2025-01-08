@@ -1,10 +1,13 @@
 {
+  "homepage": "https://naveenmachine.github.io/naveen-portfolio",
   "name": "naveen-portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "predeploy": "npm run build",
+    "deploy": "vite gh-pages",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
