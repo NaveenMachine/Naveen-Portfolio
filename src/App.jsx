@@ -1,7 +1,7 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar'; // Import the Navbar component
 import Footer from './components/Footer/Footer';
-import Hero from './components/Hero/Hero';
+//import Hero from './components/Hero/Hero';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const theme = createTheme({
