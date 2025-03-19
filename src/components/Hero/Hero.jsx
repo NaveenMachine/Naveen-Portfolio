@@ -3,20 +3,36 @@ import React from "react";
 //import MagicButton from "./MagicButton";
 //import { Spotlight } from "./ui/Spotlight";
 //import { TextGenerateEffect } from "./ui/TextGenerateEffect";
-import { Box, Grid2, Paper, Typography, IconButton } from '@mui/material';
+import { Box, Grid, Paper, Typography, IconButton, Stack, Button } from '@mui/material';
 
-const Hero = ({sx, mobileScreen}) => {
+const Hero = ({sx}) => {
   return (
-    <Box sx={{ ...sx }}>
-      <Grid2 container spacing={2}>
-        <Grid2 item xs={12} sm={6} md={4}>
-          <Paper sx={{ p: 2 }}>Item 1</Paper>
-        </Grid2>
-        <Grid2 item xs={12} sm={6} md={4}>
-          <Paper sx={{ p: 2 }}>Item 2</Paper>
-        </Grid2>
-      </Grid2>
-    </Box>
+    <>
+    {/* <Box display='flex' justifyContent='center' alignItems='center' sx={{ backgroundColor: 'secondary.main', height: '50vh', width: '100vw', }}>
+      
+    </Box> */}
+    <Grid container spacing={2} sx={{...sx, backgroundColor: 'secondary.main'}}>
+    <Grid item xs={12} sm={7} md={7} >
+      <Stack alignItems='center'>
+          <Box>
+              <h1>Naveen's Portfolio</h1>
+          </Box>
+          <Box>
+            {/* <Paper sx={{ p: 2 }}></Paper> */}
+            Hey! I'm an engineering student at the Ohio State University who has risked his life dabbling in CSS to bring you this website.
+            Thank you for your time today - I hope you enjoy your stay.
+          </Box>
+          <Box>
+            <Button sx={{backgroundColor: 'white',}}>Resume</Button>
+          </Box>
+      </Stack>
+      
+    </Grid>
+    <Grid item xs={12} sm={5} md={5}>
+      <Paper sx={{ p: 2 }}>[image here]</Paper>
+    </Grid>
+  </Grid>
+  </>
   );
 };
 

@@ -3,6 +3,7 @@ import NavBar from './components/NavBar/NavBar'; // Import the Navbar component
 import Footer from './components/Footer/Footer';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Hero from './components/Hero/Hero';
+import About from './components/About/About';
 import { useState, useEffect, useRef } from 'react';
 import { useMediaQuery } from '@mui/material';
 
@@ -10,6 +11,9 @@ const theme = createTheme({
   palette: {
     primary: {
       main: '#1976d2',
+    },
+    secondary: {
+      main: '#0a0a0a',
     },
   },
 });
@@ -26,7 +30,8 @@ function App() {
         <NavBar color="primary" links={tabsArray} />
           
         {/* Hero Section */}
-        <Hero sx={{ marginTop: isMobile ? 6 : 7 }} mobileScreen={isMobile} />
+        <Hero sx={{ marginTop: isMobile ? 6 : 7 }}/>
+        <About />
           
         {/* Footer */}
         <Footer />

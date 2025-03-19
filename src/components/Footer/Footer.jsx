@@ -12,7 +12,7 @@ export default function Footer() {
         position: 'static', // Change to 'fixed' if you want it always visible
         bottom: 0,
         width: '100vw',
-        backgroundColor: 'rgba(2,0,36,1)', // Set background color to black
+        backgroundColor: 'secondary.main', // Set background color to black
         color: 'white', // Set text and icon color to white
         padding: 2,
         textAlign: 'center',
