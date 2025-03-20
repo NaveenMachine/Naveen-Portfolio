@@ -38,7 +38,6 @@ function App() {
         <Skills />
         <Experience />
         <Projects />
-          
         {/* Footer */}
         <Footer />
         
