@@ -12,7 +12,7 @@ const Hero = ({sx}) => {
       
     </Box> */}
     <Grid container spacing={2} sx={{...sx, backgroundColor: 'secondary.main'}}>
-    <Grid item xs={12} sm={7} md={7} >
+    <Grid item xs={12} sm={12} md={7} >
       <Stack alignItems='center'>
           <Box>
               <h1>Naveen's Portfolio</h1>
@@ -28,7 +28,7 @@ const Hero = ({sx}) => {
       </Stack>
       
     </Grid>
-    <Grid item xs={12} sm={5} md={5}>
+    <Grid item xs={12} sm={12} md={5}>
       <Paper sx={{ p: 2 }}>[image here]</Paper>
     </Grid>
   </Grid>
