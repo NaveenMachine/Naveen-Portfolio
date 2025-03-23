@@ -4,6 +4,7 @@ import React from "react";
 //import { Spotlight } from "./ui/Spotlight";
 //import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import { Box, Grid2, Paper, Typography, IconButton } from '@mui/material';
+import MuiImageSlider from 'mui-image-slider';
 
 const About = () => {
   return (
