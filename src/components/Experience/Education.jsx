@@ -3,7 +3,7 @@ import React from "react";
 //import MagicButton from "./MagicButton";
 //import { Spotlight } from "./ui/Spotlight";
 //import { TextGenerateEffect } from "./ui/TextGenerateEffect";
-import { Box, Grid2, Paper, Typography, IconButton } from '@mui/material';
+import { Box, Paper, Typography, IconButton } from '@mui/material';
 import {Timeline, TimelineItem, TimelineSeparator, TimelineConnector, TimelineContent, TimelineDot} from '@mui/lab';
 import DateRangeIcon from '@mui/icons-material/DateRange';
 

@@ -6,7 +6,7 @@ import React from "react";
 import WorkTimeline from "./Work";
 import ProjectsTimeline from "./Projects";
 import Education from "./Education";
-import { Box, Grid2, Paper, Typography, IconButton, Tab } from '@mui/material';
+import { Box, Paper, Typography, IconButton, Tab } from '@mui/material';
 import {Timeline, TimelineItem, TimelineSeparator, TimelineConnector, TimelineContent, TimelineDot} from '@mui/lab';
 import {TabContext, TabList, TabPanel} from '@mui/lab';
 import { useState } from "react";

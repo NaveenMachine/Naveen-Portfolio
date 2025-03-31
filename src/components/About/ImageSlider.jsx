@@ -5,14 +5,10 @@ import React from "react";
 //import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import { Box, Grid, Paper, Typography, IconButton } from '@mui/material';
 
-const Projects = () => {
+const ImageSlider = () => {
   return (
-    <Box display='flex' justifyContent='center' alignItems='center' sx={{ backgroundColor: 'secondary.main', height: '50vh', width: '100vw', }}>
-      <Grid container spacing={2}>
-        <Paper sx={{ p: 2 }}>[Project Slider]</Paper>
-      </Grid>
-    </Box>
+    <></>
   );
 };
 
-export default Projects;
+export default ImageSlider;
