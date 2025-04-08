@@ -26,6 +26,7 @@ const tabsArray = ["About", "Skills", "Experience", "Projects"];
 function App() {
   const isMobile = useMediaQuery(theme.breakpoints.down('sm')); // Use custom theme directly
   return (
+
     <ThemeProvider theme={theme}>
       <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
         
