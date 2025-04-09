@@ -4,14 +4,24 @@ import React from "react";
 //import { Spotlight } from "./ui/Spotlight";
 //import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import { Box, Grid, Paper, Typography, IconButton } from '@mui/material';
+import ProjectSlider from "./ProjectSlider";
 
 const Projects = () => {
   return (
-    <Box display='flex' justifyContent='center' alignItems='center' sx={{ backgroundColor: 'secondary.main', height: '50vh', width: '100vw', }}>
-      <Grid container spacing={2}>
-        <Paper sx={{ p: 2 }}>[Project Slider]</Paper>
-      </Grid>
-    </Box>
+    // <Box display='flex' justifyContent='center' alignItems='center' sx={{ backgroundColor: 'secondary.main', height: '50vh', width: '100vw', }}>
+      
+    // </Box>
+    <>
+    <Box sx={{ display: 'flex', justifyContent: 'center', width: '100vw', py: 3 }}>
+  <Box sx={{ fontSize: '1.5rem', fontWeight: 'bold', color: 'white' }}>
+    Projects
+  </Box>
+</Box>
+    <Grid container spacing={2} sx={{ backgroundColor: 'secondary.main'}}>
+      
+      <ProjectSlider/>
+    </Grid>
+    </>
   );
 };
 
