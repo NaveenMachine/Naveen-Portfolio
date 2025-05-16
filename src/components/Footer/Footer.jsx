@@ -1,64 +1,77 @@
 import React from 'react';
-import { Box, Typography, IconButton } from '@mui/material';
+import { Grid, Typography, IconButton } from '@mui/material';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 export default function Footer() {
   return (
-    <Box
+    <Grid
+      container
       component="footer"
+      direction="column"
+      alignItems="center"
+      justifyContent="center"
       sx={{
-        position: 'static', // Change to 'fixed' if you want it always visible
-        bottom: 0,
-        width: '100vw',
-        backgroundColor: 'secondary.main', // Set background color to black
-        color: 'white', // Set text and icon color to white
-        padding: 2,
+        width: '100%',
+        backgroundColor: 'secondary.main',
+        color: 'white',
+        py: 3,
+        px: 2,
         textAlign: 'center',
       }}
     >
-      {/* Social Media Icons */}
-      <Typography variant="h6" sx={{ fontWeight: 'bold', marginBottom: 1 }}>
+      {/* Follow Me Heading */}
+      <Typography variant="h6" sx={{ fontWeight: 'bold', mb: 1 }}>
         Follow Me
       </Typography>
-      <Box>
-        <IconButton
-          component="a"
-          href="https://instagram.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Instagram"
-          sx={{ color: 'white' }} // Set icon color to white
-        >
-          <InstagramIcon />
-        </IconButton>
-        <IconButton
-          component="a"
-          href="https://github.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="GitHub"
-          sx={{ color: 'white' }} // Set icon color to white
-        >
-          <GitHubIcon />
-        </IconButton>
-        <IconButton
-          component="a"
-          href="https://linkedin.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="LinkedIn"
-          sx={{ color: 'white' }} // Set icon color to white
-        >
-          <LinkedInIcon />
-        </IconButton>
-      </Box>
 
-      {/* Copyright Section */}
-      <Typography variant="body2" sx={{ marginTop: 2 }}>
+      {/* Social Icons */}
+      <Grid item>
+        <Grid container spacing={2} justifyContent="center">
+          <Grid item>
+            <IconButton
+              component="a"
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              sx={{ color: 'white' }}
+            >
+              <InstagramIcon />
+            </IconButton>
+          </Grid>
+          <Grid item>
+            <IconButton
+              component="a"
+              href="https://github.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              sx={{ color: 'white' }}
+            >
+              <GitHubIcon />
+            </IconButton>
+          </Grid>
+          <Grid item>
+            <IconButton
+              component="a"
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              sx={{ color: 'white' }}
+            >
+              <LinkedInIcon />
+            </IconButton>
+          </Grid>
+        </Grid>
+      </Grid>
+
+      {/* Copyright */}
+      <Typography variant="body2" sx={{ mt: 2 }}>
         Made with ❤️. © {new Date().getFullYear()} Naveen Kamath. All rights reserved.
       </Typography>
-    </Box>
+    </Grid>
   );
 }

@@ -12,7 +12,7 @@ const Skills = () => {
     //    <Paper sx={{ p: 2 }}>[Skills Drop Down]</Paper>
       
     // </Box>
-    <Grid container spacing={2} sx={{ backgroundColor: 'secondary.main'}}>
+    <Grid container sx={{ backgroundColor: 'secondary.main'}}>
     <Paper sx={{ p: 2 }}>[skills dropdown]</Paper>
     </Grid>
   );

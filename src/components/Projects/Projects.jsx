@@ -17,9 +17,9 @@ const Projects = () => {
     Projects
   </Box>
 </Box>
-    <Grid container spacing={2} sx={{ backgroundColor: 'secondary.main'}}>
+    <Grid containersx={{ backgroundColor: 'secondary.main'}}>
       
-      <ProjectSlider/>
+      {/* <ProjectSlider/> */}
     </Grid>
     </>
   );

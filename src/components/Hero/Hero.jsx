@@ -11,7 +11,7 @@ const Hero = ({sx}) => {
     {/* <Box display='flex' justifyContent='center' alignItems='center' sx={{ backgroundColor: 'secondary.main', height: '50vh', width: '100vw', }}>
       
     </Box> */}
-    <Grid container spacing={2} sx={{...sx, backgroundColor: 'secondary.main'}}>
+    <Grid container sx={{...sx, backgroundColor: 'secondary.main'}}>
     <Grid item xs={12} sm={12} md={7} >
       <Stack alignItems='center'>
           <Box>
