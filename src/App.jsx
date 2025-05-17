@@ -7,6 +7,7 @@ import Hero from './components/Hero/Hero';
 import Projects from './components/Projects/Projects'
 import Experience from './components/Experience/Experience';
 import About from './components/About/About';
+import Dropdown from './components/Dropdown/Dropdown';
 import { useState, useEffect, useRef } from 'react';
 import { useMediaQuery } from '@mui/material';
 
@@ -36,7 +37,7 @@ function App() {
         {/* Hero Section */}
         <Hero sx={{ marginTop: isMobile ? 6 : 7 }}/>
         <About />
-        <Skills />
+        <Dropdown />
         <Experience />
         <Projects />
         {/* Footer */}
