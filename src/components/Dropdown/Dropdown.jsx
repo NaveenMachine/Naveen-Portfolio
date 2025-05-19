@@ -34,7 +34,7 @@ const Dropdown = () => {
           setDropdownToggled(!dropdownToggled);
         }}
       >
-        <span>{selectedOption ? selectedOption.label : "Select Car"}</span>
+        <span>{selectedOption ? selectedOption.label : "Skills"}</span>
         <span>{dropdownToggled ? "-" : "+"}</span>
       </button>
       <div className={`options ${dropdownToggled ? "visible" : ""}`}>
