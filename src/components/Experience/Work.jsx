@@ -10,6 +10,17 @@ import {Timeline, TimelineItem, TimelineSeparator, TimelineConnector, TimelineCo
 const WorkTimeline = () => {
   return (
     <Timeline position='alternate'>
+    <TimelineItem align="left">
+      <TimelineSeparator>
+          <TimelineDot />
+          <TimelineConnector />
+      </TimelineSeparator>
+      <TimelineContent>
+        <Box >AI Engineer Intern</Box>
+        <Box>Air Force Research Lab</Box>
+        <Box  sx={{ display: 'flex', alignItems: 'center', gap: 1 }} ><DateRangeIcon fontSize="small"/> June 2025 - Present</Box>
+      </TimelineContent>
+    </TimelineItem>
     <TimelineItem align="right">
       <TimelineSeparator>
           <TimelineDot />

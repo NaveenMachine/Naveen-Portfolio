@@ -12,7 +12,7 @@ const Projects = () => {
       
     // </Box>
     <>
-    <Box sx={{ display: 'flex', justifyContent: 'center', width: '100vw', py: 3 }}>
+    <Box sx={{backgroundColor: 'secondary.main',  display: 'flex', justifyContent: 'center', width: '100vw', py: 3 }}>
   <Box sx={{ fontSize: '1.5rem', fontWeight: 'bold', color: 'white' }}>
     Projects
   </Box>

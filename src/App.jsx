@@ -9,7 +9,7 @@ import Experience from './components/Experience/Experience';
 import About from './components/About/About';
 // import Dropdown from './components/Dropdown/Dropdown';
 import { useState, useEffect, useRef } from 'react';
-import { useMediaQuery } from '@mui/material';
+import { Box, useMediaQuery } from '@mui/material';
 
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import CodeIcon from '@mui/icons-material/Code';
@@ -69,6 +69,11 @@ function App() {
         <About />
         {/* <Dropdown /> */}
         
+        <Box sx={{backgroundColor: 'secondary.main', display: 'flex', justifyContent: 'center', width: '100vw', py: 2 }}>
+          <Box sx={{ fontSize: '1.5rem', fontWeight: 'bold', color: 'white' }}>
+            Skills
+          </Box>
+        </Box>
         <Dropdown
           keepOpen
           open={open}
